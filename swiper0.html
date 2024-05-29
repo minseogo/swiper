@@ -97,12 +97,13 @@
       right: 0;
       bottom: 0;
       height: 8px;
-      transition: 4s;
+      
       background-color: rgba(255, 0, 0, 1);
       width: 0px;
     }
     .swiper-pagination-bullet-active:after{
       width: 100%;
+      transition: 4s;
   
     }
  
@@ -165,10 +166,10 @@
    const bannerText = ["편강한의원 찐후기","한약소개","예약하기"];
    const swiper_mainBanner = new Swiper("#mainBanner .swiper", {
       loop: true,
-      autoplay: {
-       delay: 4000,
-       disableOnInteraction: false,
-     },
+    //   autoplay: {
+    //    delay: 4000,
+    //    disableOnInteraction: false,
+    //  },
       pagination: {
         el: "#mainBanner .swiper-pagination",
         clickable: true,
