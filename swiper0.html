@@ -170,22 +170,26 @@
 
   <script>
    //실행식
-  //  const bannerText = ["편강한의원 찐후기","한약소개","예약하기"];
+   //const bannerText = ["편강한의원 찐후기","한약소개","예약하기"];
    const swiper_mainBanner = new Swiper("#mainBanner .swiper", {
       loop: true,
-    //   autoplay: {
-    //    delay: 4000,
-    //    disableOnInteraction: false,
-    //  },
+      autoplay: {
+       delay: 3000,
+       disableOnInteraction: false,
+     },
       pagination: {
         el: "#mainBanner .swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
+          console.log("스와이퍼객체 :", this);
+          console.log("swiper-slide 모두이므로 데이터타입이 배열임 :", this.slides);
+          console.log("하나하나 접근하려면 배열 순번넣어서 접근하고 dataset확인 :", this.slides[index].dataset);
           console.log(this.slides[index].dataset.btn);
           return `<span class="${className}">${this.slides[index].dataset.btn}</span>`;
         },
       },
     });
+
    
   </script>
 </body>
